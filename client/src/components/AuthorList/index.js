@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { graphql } from 'react-apollo';
 
 import Author from '../Author/';
-import {getAuthorQuery} from '../../queries/'
+import {getAuthorsQuery} from '../../queries/'
 
 class AuthorList extends Component {
 
@@ -14,8 +14,8 @@ class AuthorList extends Component {
                     data.loading 
                     ? <div> Loading this data... </div> 
                     : <ul id='main'>
-                        {data.author.map(author => (
-                            <Author key={author.id} name={author.name} books={author.books} age={author.age} id={author.id}/>
+                        { data.authors.map((author, index) => (
+                            <Author key={index} name={author.name} books={author.books} age={author.age} id={author.id}/>
                        ))}
                     </ul>
                 }
@@ -24,4 +24,4 @@ class AuthorList extends Component {
     }
 }
 
-export default graphql(getAuthorQuery)(AuthorList);
+export default graphql(getAuthorsQuery)(AuthorList);

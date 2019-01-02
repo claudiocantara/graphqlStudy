@@ -15,7 +15,7 @@ const getAuthorsQuery = gql`{
     authors {
         name
         age
-        book {
+        books {
            name
            genre
         }
