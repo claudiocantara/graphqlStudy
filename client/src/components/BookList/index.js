@@ -5,9 +5,12 @@ import Book from '../Book/';
 import {getBooksQuery} from '../../queries/'
 
 class BookList extends Component {
-
+    componentDidMount() {
+        console.log(this.props.data);
+    }
     render() {
         const { data } = this.props;
+        
         return (
             <Fragment>
                 {
