@@ -1,15 +1,16 @@
-const express = require('express');
-const graphqlHTTP = require('express-graphql');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import express from'express';
+import graphqlHTTP from'express-graphql';
+import mongoose from'mongoose';
+import cors from 'cors';
 
-const schema = require('./schema/');
+import config from './config';
+import schema from'./schema/';
 
 const app = express();
 
 app.use(cors())
 
-mongoose.connect('mongodb://arngrim:arngrim123@ds147354.mlab.com:47354/graphql_test', { useNewUrlParser: true })
+mongoose.connect(config.database, { useNewUrlParser: true })
 mongoose.connection.once('open', () => console.log('We have database'))
 
 app.use('/graphql', graphqlHTTP({

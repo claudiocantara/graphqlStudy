@@ -1,16 +1,17 @@
-const graphql = require('graphql');
-
-const Book = require('../models/book');
-const Author = require('../models/author');
-
-const {
+import {
     GraphQLObjectType,
     GraphQLString,
     GraphQLInt,
     GraphQLList,
     GraphQLSchema,
     GraphQLID,
-    GraphQLNonNull } = graphql;
+    GraphQLNonNull
+} from 'graphql';
+
+import Book from '../models/book';
+import Author from '../models/author';
+
+
 
 const BookType = new GraphQLObjectType({
     name: 'Book',
@@ -111,7 +112,7 @@ const MutationQuery = new GraphQLObjectType({
     }
 })
 
-module.exports = new GraphQLSchema({
+export default new GraphQLSchema({
     query: RootQuery,
     mutation: MutationQuery
 });
