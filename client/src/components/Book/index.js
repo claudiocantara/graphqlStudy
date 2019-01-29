@@ -1,10 +1,17 @@
 import React from 'react';
+import './index.css'
 
 const Book = ({name, author, genre, id}) => (
-    <li>
-        <div> Name: {name} </div>
-        <div> Author: {author.name} </div>
-        <div> Gender: {genre} </div>
+    <li className='book-item'>
+        <p>
+          <span className='item-description'>Name:</span> {name} 
+        </p>
+        <p>
+          <span className='item-description'>Author: </span> {author.name} 
+        </p>
+        <p>
+          <span className='item-description'>Gender: </span> {genre} 
+        </p>
     </li>  
 )
 

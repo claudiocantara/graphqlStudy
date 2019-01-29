@@ -3,8 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header/';
-import BookList from './components/BookList/';
-import AuthorList from './components/AuthorList/';
+import Book from './pages/Book/';
+import Author from './pages/Author/';
 
 
 class App extends Component {
@@ -12,10 +12,10 @@ class App extends Component {
     return ( 
       <div className="App">
           <Header/>
-          <Switch>
-            <Route exact path='/' component={BookList} /> 
-            <Route exact path='/authors' component={AuthorList} /> 
-          </Switch>
+            <Switch>
+              <Route exact path='/' component={Book} /> 
+              <Route exact path='/authors' component={Author} /> 
+            </Switch>
       </div>
     );
   }
