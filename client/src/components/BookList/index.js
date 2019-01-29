@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo';
 import Book from '../Book/';
 import {getBooksQuery} from '../../queries/'
 
-import './index.css'
+import './index.scss'
 class BookList extends Component {
     componentDidMount() {
         console.log(this.props.data);
@@ -13,7 +13,7 @@ class BookList extends Component {
         const { data } = this.props;
         
         return (
-            <main>
+            <main className={this.props.className} >
                 {
                     data.loading 
                     ? <div> Loading this data... </div> 

@@ -1,0 +1,36 @@
+///////////////////////////////////////////////////////////////////////////////
+//   # Base styles
+//     All your general styles should be here
+///////////////////////////////////////////////////////////////////////////////
+
+
+html {
+  font-size: 85%;
+  font-family: $f-body;
+  line-height: 1.1;
+
+  @include at-media(large) {
+    font-size: 100%;
+    line-height: 1.35;
+  }
+}
+
+html {
+  overflow: initial;
+  height: 100%;
+  position: relative;
+
+  &.cart-hover-html {
+    overflow: hidden;
+  }
+}
+
+
+a {
+  color: $c-brand;
+  text-decoration: none;
+
+  &:hover {
+    color: $c-highlight;
+  }
+}

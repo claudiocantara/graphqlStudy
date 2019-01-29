@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import './App.css';
+import './scss/_style.scss'
 import Header from './components/Header/';
 import Book from './pages/Book/';
 import Author from './pages/Author/';

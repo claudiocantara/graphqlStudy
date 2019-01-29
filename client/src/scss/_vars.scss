@@ -1,0 +1,78 @@
+///////////////////////////////////////////////////////////////////////////////
+//  # Variables
+//--------------------------------
+//    Define all your global variables in this file
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+// ## Colours
+//---------------------------------
+//    Colours variables are prefixed with 'c-'. Try to use abstract names and
+//    not colour names as it won't affect your project in the long run
+///////////////////////////////////////////////////////////////////////////////
+
+$c-brand:        #0054a5;
+$c-brand-dark:   #004990;
+$c-brand-darker: #00386d;
+$c-highlight:    #ed1c24;
+$c-accent:       #ffc20e;
+$c-pink:         #f43ca9;
+
+$c-light:        #BBDEFB;
+$c-lighter:      #eaeaea;
+$c-dark:         #1976D2;
+
+$c-border-light: #d7d7d7;
+$c-border-darker:#8d8d8d;
+$c-darker:       #333;
+
+$c-menu: (
+  medicamentos:  #ed1c24,
+  beleza:        #f43ca9,
+  dermo:         #662d91,
+  mamaes:        #0086cc,
+  fitness:       #00cccc,
+  conveniencia:  #8dc63f,
+  ofertas:       #ffc20e
+);
+
+
+
+// ## Fonts
+//    Font variables are prefixed widt 'f-'. Try to use abstract names and
+//    not font names as it won't affect your project in the long run
+///////////////////////////////////////////////////////////////////////////////
+
+$f-display: 'Open Sans', 'Roboto', sans-serif;
+$f-body:    $f-display;
+
+// ## Files - images url's
+//    Files variables are prefixed widt 'bg-'. Try to use abstract names
+///////////////////////////////////////////////////////////////////////////////
+
+$bg-img: '/arquivos/';
+
+
+
+
+// # Media Queries break points
+//    MQ variables are prefixed widt 'vp-' (as in viewport). Try to use
+//    abstract names and not something specific as mobile, as it won't
+//    affect your project in the long run
+///////////////////////////////////////////////////////////////////////////////
+
+$vps: (
+  small:  450px,
+  medium: 767px,
+  large:  992px
+);
+
+
+// # Helpers
+//    Any global helper variable should be defined here. Try to chose a name
+//    that describes it the best as possible
+///////////////////////////////////////////////////////////////////////////////
+
+$container-width: 1432px;

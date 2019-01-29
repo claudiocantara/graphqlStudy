@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 class Form extends Component {
-
+  
   render() {
     return (
-      <aside>
+      <aside className={this.props.className} >
         <form>
           <div className='form-container'>
             <div className='form-item'>
