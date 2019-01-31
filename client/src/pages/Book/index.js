@@ -9,8 +9,8 @@ class Book extends Component {
     return (
       <div className='container'>
         <div className='grid'>
-          < FormBook className='col-small-4 col-medium-4 col-big-5'/>
-          < BookList className='col-small-4 col-medium-8 col-big-7'/>
+          < FormBook />
+          < BookList />
         </div> 
       </div>
     )

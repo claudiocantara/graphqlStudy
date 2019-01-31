@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import './style.scss'
 
 const Book = ({name, author, genre, id}) => (
     <li className='book-item'>
