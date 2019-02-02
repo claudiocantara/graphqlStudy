@@ -1,0 +1,40 @@
+
+.aside-container {
+  align-self: center;
+  max-height: 300px;
+
+  h4 { 
+    margin: 5px; 
+    height: 22px;
+    color: #4354a9;
+  }
+} 
+
+.form-container {
+  padding: 10px;
+}
+
+.form-item {
+  margin-bottom: 15px;
+
+  span {
+    display: block;
+    text-align: left;
+    color: #4354a9;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px 12px;
+    outline: none;
+  }
+
+  button {
+    width: 100%;
+    padding: 8px 12px;
+    background-color:#4354a9;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+  }
+}
