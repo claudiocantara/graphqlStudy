@@ -1,27 +1,24 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 import { graphql } from 'react-apollo';
 
 import Author from '../Author/';
-import {getAuthorsQuery} from '../../queries/'
+import { getAuthorsQuery } from '../../queries/'
 
-class AuthorList extends Component {
+import './style.scss';
 
-    render() {
-        const { data } = this.props;
-        return (
-            <Fragment>
-                {
-                    data.loading 
-                    ? <div> Loading this data... </div> 
-                    : <ul id='main'>
-                        { data.authors.map((author, index) => (
-                            <Author key={index} name={author.name} books={author.books} age={author.age} id={author.id}/>
-                       ))}
-                    </ul>
-                }
-            </Fragment>
-        )
+const AuthorList = ({ data }) => ( 
+  <main className={'col-small-4 col-medium-8 col-big-7 main-container'} >
+    { data.loading && <div> Loading this data... </div> }
+    { data.error &&  <div> Error while Loading... </div> }
+    { data.authors &&  
+      <ul className='book-list'>
+        {data.authors.map(author => (
+          <Author key={author.id} name={author.name} age={author.age} />
+        ))}
+      </ul>
     }
-}
+  </main>
+)
+
 
 export default graphql(getAuthorsQuery)(AuthorList);

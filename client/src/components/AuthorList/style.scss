@@ -1,0 +1,11 @@
+.book-list {
+  list-style: none;
+  padding: 0px;
+  margin: 0 auto;
+}
+
+.main-container {
+  height: calc(100vh - 50px);
+  overflow: hidden;
+  overflow-y: scroll;
+} 
