@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AuthorList from '../../components/AuthorList';
+import FormAuthor from '../../components/FormAuthor';
 
-class Author extends Component {
-    state = {
-
-    }
-
-    render() {
-        return (
-            <AuthorList/>
-        )
-    }
-}
+const Author = () => (
+  <div className='container'>
+    <div className='grid'>
+      <FormAuthor/>
+      <AuthorList/>
+    </div> 
+  </div>
+)
 
 export default Author;
