@@ -25,7 +25,8 @@ const getAuthorsQuery = gql`{
 const getAuthorsList = gql`{
   authors {
       id
-      name
+      name,
+      age
   }
 }`
 
@@ -35,5 +36,12 @@ const saveBook = gql`
         id
     }
   }`;
+  
+  const saveAuthor = gql`
+    mutation AddAuthor($name: String!, $age: Int!) {
+    addAuthor(name: $name, age: $age) {
+        id
+    }
+  }`;
 
-export { getAuthorsQuery, getBooksQuery, getAuthorsList, saveBook }
+export { getAuthorsQuery, getBooksQuery, getAuthorsList, saveBook, saveAuthor }
